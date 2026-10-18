@@ -1,0 +1,18 @@
+# Verilator build directories
+**/obj_dir/
+obj_dir/
+
+# Waveform files
+*.vcd
+**/*.vcd
+
+# Temporary and backup files
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Compiled binaries or shared libraries if generated outside obj_dir
+*.o
+*.a
+*.d

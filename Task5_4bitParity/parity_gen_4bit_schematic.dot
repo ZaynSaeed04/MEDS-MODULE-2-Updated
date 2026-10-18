@@ -1,0 +1,38 @@
+digraph "parity_gen_4bit" {
+label="parity_gen_4bit";
+rankdir="LR";
+remincross=true;
+n4 [ shape=octagon, label="parity_out", color="black", fontcolor="black"];
+n5 [ shape=octagon, label="data_in", color="black", fontcolor="black"];
+c9 [ shape=record, label="{{<p6> A|<p7> B}|$81\n$_XOR_|{<p8> Y}}",  ];
+x0 [ shape=record, style=rounded, label="<s0> 0:0 - 1:1 ", color="black", fontcolor="black" ];
+c9:p8:e -> x0:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+x1 [ shape=record, style=rounded, label="<s0> 3:3 - 0:0 ", color="black", fontcolor="black" ];
+x1:e -> c9:p7:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+x2 [ shape=record, style=rounded, label="<s0> 2:2 - 0:0 ", color="black", fontcolor="black" ];
+x2:e -> c9:p6:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+c10 [ shape=record, label="{{<p6> A|<p7> B}|$80\n$_XOR_|{<p8> Y}}",  ];
+x3 [ shape=record, style=rounded, label="<s0> 0:0 - 0:0 ", color="black", fontcolor="black" ];
+c10:p8:e -> x3:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+x4 [ shape=record, style=rounded, label="<s0> 1:1 - 0:0 ", color="black", fontcolor="black" ];
+x4:e -> c10:p7:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+x5 [ shape=record, style=rounded, label="<s0> 0:0 - 0:0 ", color="black", fontcolor="black" ];
+x5:e -> c10:p6:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+c11 [ shape=record, label="{{<p6> A|<p7> B}|$83\n$_XOR_|{<p8> Y}}",  ];
+x6 [ shape=record, style=rounded, label="<s0> 1:1 - 0:0 ", color="black", fontcolor="black" ];
+x6:e -> c11:p7:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+x7 [ shape=record, style=rounded, label="<s0> 0:0 - 0:0 ", color="black", fontcolor="black" ];
+x7:e -> c11:p6:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+x8 [shape=point, ];
+n2 [ shape=point ];
+x0:s0:e -> n2:w [color="black", fontcolor="black", label=""];
+x3:s0:e -> n2:w [color="black", fontcolor="black", label=""];
+n2:e -> x6:s0:w [color="black", fontcolor="black", label=""];
+n2:e -> x7:s0:w [color="black", fontcolor="black", label=""];
+c11:p8:e -> x8:w [color="black", fontcolor="black", label=""];
+x8:e -> n4:w [color="black", fontcolor="black", label=""];
+n5:e -> x1:s0:w [color="black", fontcolor="black", label=""];
+n5:e -> x2:s0:w [color="black", fontcolor="black", label=""];
+n5:e -> x4:s0:w [color="black", fontcolor="black", label=""];
+n5:e -> x5:s0:w [color="black", fontcolor="black", label=""];
+}
