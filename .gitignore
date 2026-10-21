@@ -1,18 +1,37 @@
-# Verilator build directories
+# ==========================================
+# Build Artifacts & Verilator Generated Files
+# ==========================================
 **/obj_dir/
 obj_dir/
+*.o
+*.a
+*.d
+*.dat
 
-# Waveform files
+# ==========================================
+# Waveforms & Simulation Outputs
+# ==========================================
 *.vcd
 **/*.vcd
 
-# Temporary and backup files
+# ==========================================
+# Shell Scripts
+# ==========================================
+*.sh
+**/*.sh
+
+# ==========================================
+# Schematics & Graphviz Output Files
+# ==========================================
+*.dot
+**/*.dot
+*.svg
+**/*.svg
+
+# ==========================================
+# Temporary & OS Files
+# ==========================================
 *~
 *.swp
 *.swo
 .DS_Store
-
-# Compiled binaries or shared libraries if generated outside obj_dir
-*.o
-*.a
-*.d
